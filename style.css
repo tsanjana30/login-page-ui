@@ -51,4 +51,32 @@ input:focus{
 button:hover{
   background:#357abd;
   transform:scale(1.03);
+}.forgot{
+  text-align:center;
+  margin-top:15px;
+  color:#666;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.forgot:hover{
+  color:#4a90e2;
+}
+
+#message{
+  text-align:center;
+  margin-top:10px;
+  font-weight:bold;
+}
+
+.popup{
+  display:none;
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:green;
+  color:white;
+  padding:15px 20px;
+  border-radius:6px;
+  font-weight:bold;
 }
