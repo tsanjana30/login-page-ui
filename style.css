@@ -1,72 +1,91 @@
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family:Arial, sans-serif;
-  background:#f2f2f2;
 }
 
-.container{
+body{
   height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
+  background:linear-gradient(135deg,#141e30,#243b55);
 }
 
 .login-box{
-  background:white;
-  padding:40px;
   width:90%;
-  max-width:350px;
-  border-radius:12px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  max-width:380px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
 h2{
   text-align:center;
-  margin-bottom:20px;
-} input{
+  color:white;
+  margin-bottom:30px;
+  font-size:32px;
+}
+
+input{
   width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:1px solid #ccc;
-  border-radius:6px;
-  box-sizing:border-box;
+  padding:14px;
+  margin-bottom:18px;
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,0.15);
+  color:white;
   font-size:15px;
+}
+
+input::placeholder{
+  color:#ddd;
 }
 
 input:focus{
   outline:none;
   border:1px solid #4a90e2;
-  box-shadow:0 0 5px rgba(74,144,226,0.5);
-} button{
+  box-shadow:0 0 8px rgba(74,144,226,0.5);
+}
+
+button{
   width:100%;
-  padding:12px;
+  padding:14px;
+  border:none;
+  border-radius:10px;
   background:#4a90e2;
   color:white;
-  border:none;
-  border-radius:6px;
   font-size:16px;
   cursor:pointer;
   transition:0.3s;
+  font-weight:bold;
 }
 
 button:hover{
   background:#357abd;
-  transform:scale(1.03);
-}.forgot{
+  transform:translateY(-2px);
+}
+
+.forgot{
+  display:block;
   text-align:center;
-  margin-top:15px;
-  color:#666;
-  cursor:pointer;
+  margin-top:18px;
+  color:#ddd;
+  text-decoration:none;
   transition:0.3s;
 }
 
 .forgot:hover{
-  color:#4a90e2;
+  color:white;
 }
 
 #message{
   text-align:center;
-  margin-top:10px;
+  margin-top:15px;
+  color:#ffb3b3;
   font-weight:bold;
 }
 
@@ -75,19 +94,22 @@ button:hover{
   position:fixed;
   top:20px;
   right:20px;
-  background:green;
+  background:#28a745;
   color:white;
   padding:15px 20px;
-  border-radius:6px;
+  border-radius:8px;
   font-weight:bold;
-} @media(max-width:500px){
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+@media(max-width:500px){
 
   .login-box{
-    padding:25px;
+    padding:30px 25px;
   }
 
   h2{
-    font-size:24px;
+    font-size:28px;
   }
 
 }

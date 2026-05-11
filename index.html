@@ -3,54 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Modern Login UI</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<div class="container">
+<body>
 
   <div class="login-box">
 
-    <h2>Login</h2>
+    <h2>Welcome Back</h2>
 
-    <input type="email" id="email" placeholder="Enter Email">
+    <input 
+      type="email" 
+      id="email" 
+      placeholder="Email Address"
+    >
 
-    <input type="password" id="password" placeholder="Enter Password">
+    <input 
+      type="password" 
+      id="password" 
+      placeholder="Password"
+    >
 
-    <button onclick="login()">Login</button>
+    <button onclick="login()">
+      Login
+    </button>
 
-    <p class="forgot">Forgot Password?</p>
+    <a href="#" class="forgot">
+      Forgot Password?
+    </a>
 
     <p id="message"></p>
 
   </div>
 
-</div>
+  <div id="popup" class="popup">
+    Login Successful!
+  </div>
 
-<script>
-function login(){
+  <script>
 
-  let email=document.getElementById("email").value;
-  let password=document.getElementById("password").value;
+    function login(){
 
-  if(email==="" || password===""){
-    document.getElementById("message").innerHTML="Please fill all fields";
-    document.getElementById("message").style.color="red";
-  }
-  else{
-    document.getElementById("popup").style.display="block";
+      let email =
+      document.getElementById("email").value;
 
-    setTimeout(()=>{
-      document.getElementById("popup").style.display="none";
-    },2000);
-  }
-}
-</script>
+      let password =
+      document.getElementById("password").value;
 
-<div id="popup" class="popup">
-  Login Successful!
-</div>
+      let message =
+      document.getElementById("message");
+
+      if(email === "" || password === ""){
+
+        message.innerHTML =
+        "Please fill all fields";
+
+      }
+
+      else{
+
+        message.innerHTML = "";
+
+        document.getElementById("popup")
+        .style.display = "block";
+
+        setTimeout(()=>{
+
+          document.getElementById("popup")
+          .style.display = "none";
+
+        },2000);
+
+      }
+
+    }
+
+  </script>
 
 </body>
 </html>
